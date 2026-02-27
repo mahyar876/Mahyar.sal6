@@ -399,9 +399,11 @@
     }
   
     .timeline-arrow {
-      font-size: 4rem;           /* حتی بزرگ‌تر در موبایل */
-      transform: rotate(90deg);  /* فلش افقی رو به عمودی تبدیل می‌کنه */
-      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      transform: rotate(90deg);
     }
     .journey .section-title {
         margin-bottom: 6rem;        /* فاصله بیشتر در موبایل */
@@ -771,4 +773,5 @@
       height: auto;
       transform: translateX(-50%);
     }
+
   }
