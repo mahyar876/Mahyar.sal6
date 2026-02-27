@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahyar Salehi | Front-end Developer</title>
+  <meta name="description" content="Personal website of Mahyar Salehi, front-end developer in progress." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo glow">Mahyar</div>
+      
+      <nav id="main-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-btn">Contact</a>
+      </nav>
+      
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text reveal glow">
+        <h1>Mahyar Salehinezhad</h1>
+        <h2>Front-end Developer in Progress</h2>
+        <p>I build clean, modern, and user-friendly web experiences.</p>
+        <div class="hero-buttons reveal">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image reveal">
+        <div class="avatar">
+          <img src="mahyar.jpg" alt="Mahyar Salehi" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about reveal">
+    <div class="container">
+      <div class="about-box" onclick="toggleAbout()">
+        <div class="about-header">
+          <h2 class="section-title glow">About Me</h2>
+          <span class="toggle-arrow" id="about-arrow">▼</span>
+        </div>
+        <div class="about-content" id="about-content">
+          <p class="about-text">
+            I started my journey in web development with a strong passion for creating modern and user-friendly websites. 
+            Currently focused on HTML and CSS, while expanding into JavaScript and React to become a full-stack developer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== MY JOURNEY ===== -->
+<section class="journey reveal">
+    <div class="container">
+      <h2 class="section-title glow">My Journey</h2>
+  
+      <div class="journey-timeline">
+        <div class="timeline-item">
+          <span class="step">Start</span>
+        </div>
+        <span class="timeline-arrow">→</span>
+  
+        <div class="timeline-item current">
+          <span class="step">HTML/CSS</span>
+        </div>
+        <span class="timeline-arrow">→</span>
+  
+        <div class="timeline-item">
+          <span class="step">JavaScript</span>
+        </div>
+        <span class="timeline-arrow">→</span>
+  
+        <div class="timeline-item">
+          <span class="step">React</span>
+        </div>
+        <span class="timeline-arrow">→</span>
+  
+        <div class="timeline-item">
+          <span class="step">Full-Stack</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- ===== PROJECTS ===== -->
+<section id="projects" class="projects reveal">
+    <div class="container">
+      <div class="accordion-box" onclick="toggleSection('projects-content', 'projects-arrow')">
+        <div class="accordion-header">
+          <h2 class="section-title glow">Projects</h2>
+          <span class="toggle-arrow" id="projects-arrow">▼</span>
+        </div>
+        
+        <div class="accordion-content" id="projects-content">
+          <div class="project-grid">
+            <div class="project-card">
+              <div class="project-image"></div>
+              <h3>Portfolio Website</h3>
+              <p>Personal portfolio built with HTML & CSS.</p>
+            </div>
+  
+            <div class="project-card">
+              <div class="project-image">
+              <h3>Marjan Bayat - English Instructor</h3>
+              <p>Website for an English language instructor featuring resume, achievements, courses, and contact information. Built with HTML and CSS.</p>
+              <div class="project-links">
+                <a href="https://mahyar876.github.io/Marjan-Bayat10/" target="_blank" rel="noopener noreferrer" class="btn small primary">Live Demo</a>
+              </div>
+            </div>
+  
+            <!-- اگر پروژه دیگه‌ای داری همینجا اضافه کن -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="beyond reveal">
+    <div class="container">
+      <h2 class="section-title glow">Beyond Code</h2>
+      <div class="interests">
+        <span>⚽ Football</span>
+        <span>📷 Photography</span>
+        <span>💻 Coding</span>
+        <span>🚀 Learning</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact reveal">
+    <div class="container">
+      <h2 class="section-title glow">Contact</h2>
+      <p class="contact-text">Let's build something awesome together.</p>
+      
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+  
+      <!-- پیام موفقیت / خطا -->
+      <div id="form-status" style="margin-top: 1.5rem; text-align: center; font-weight: 500;"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    © <span id="year"></span> All Rights Reserved | 
+    Designed & Developed by 
+    <a href="https://www.instagram.com/mahyar.sal6" target="_blank" class="designer-name">Mahyar Salehinezhad</a>
+</footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
