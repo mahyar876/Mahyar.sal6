@@ -92,11 +92,6 @@
     font-weight: 600;
     font-size: 1rem;
   }
-
-
-
-  
-  
   .hamburger {
     display: none;
     flex-direction: column;
@@ -403,7 +398,6 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      transform: rotate(90deg);
     }
     .journey .section-title {
         margin-bottom: 6rem;        /* فاصله بیشتر در موبایل */
@@ -723,6 +717,69 @@
     margin: 0 auto 2.5rem auto;
   }
   
+  /* ===== LOGIN OVERLAY ===== */
+#login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f1115;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.login-box {
+  background: #181b22;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,122,24,0.12);
+  text-align: center;
+  width: 320px;
+}
+
+.login-box h2 {
+  color: #ff7a18;
+  margin-bottom: 1.5rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background: #111418;
+  color: #e0e0e0;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(45deg, #ff7a18, #ff9a3c);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255,122,24,0.4);
+}
+
+#login-message {
+  margin-top: 0.8rem;
+  color: #ff4444;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
   /* RESPONSIVE */
   @media (max-width: 768px) {
     .hamburger { display: flex; }
@@ -773,30 +830,30 @@
       height: auto;
       transform: translateX(-50%);
     }
-
-  }
-@media (max-width: 768px) {
-
-  .timeline-arrow {
-    transform: none;      /* چرخش حذف */
-    font-size: 3.2rem;
-    margin: 0.5rem 0;
   }
 
-  .timeline-arrow::before {
-    content: "↓";         /* فلش واقعی رو به پایین */
-  }
+  @media (max-width: 768px) {
 
-  .timeline-arrow {
-    color: transparent;   /* فلش قبلی مخفی */
-    position: relative;
+    .timeline-arrow {
+      transform: none;      /* چرخش حذف */
+      font-size: 3.2rem;
+      margin: 0.5rem 0;
+    }
+  
+    .timeline-arrow::before {
+      content: "↓";         /* فلش واقعی رو به پایین */
+    }
+  
+    .timeline-arrow {
+      color: transparent;   /* فلش قبلی مخفی */
+      position: relative;
+    }
+  
+    .timeline-arrow::before {
+      color: #ff7a18;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
   }
-
-  .timeline-arrow::before {
-    color: #ff7a18;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-}
