@@ -7,10 +7,19 @@
   <meta name="description" content="Personal website of Mahyar Salehi, front-end developer in progress." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.counter.dev/script.js" data-id="6501ed89-9136-452b-ac98-a11bf91d1612" data-utcoffset="4"></script>
 </head>
 <body>
-
+  <!-- LOGIN OVERLAY -->
+  <div id="login-overlay">
+    <div class="login-box">
+      <h2>Enter Password</h2>
+      <input type="password" id="site-password" placeholder="Password" />
+      <button id="login-btn">Enter</button>
+      <p id="login-message"></p>
+    </div> 
+    </div>
+  <!-- MAIN SITE CONTENT -->
+  <div id="main-site" style="display: none;">
   <header class="navbar">
     <div class="nav-inner">
       <div class="logo glow">Mahyar</div>
@@ -125,7 +134,7 @@
                 <a href="https://mahyar876.github.io/Marjan-Bayat10/" target="_blank" rel="noopener noreferrer" class="btn small primary">Live Demo</a>
               </div>
             </div>
-  
+           
             <!-- اگر پروژه دیگه‌ای داری همینجا اضافه کن -->
           </div>
         </div>
@@ -168,7 +177,6 @@
     <a href="https://www.instagram.com/mahyar.sal6" target="_blank" class="designer-name">Mahyar Salehinezhad</a>
 </footer>
   <script src="script.js" defer></script>
+  <script src="login.js" defer></script>
 </body>
-
 </html>
-
