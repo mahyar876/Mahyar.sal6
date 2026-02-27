@@ -775,3 +775,28 @@
     }
 
   }
+@media (max-width: 768px) {
+
+  .timeline-arrow {
+    transform: none;      /* چرخش حذف */
+    font-size: 3.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .timeline-arrow::before {
+    content: "↓";         /* فلش واقعی رو به پایین */
+  }
+
+  .timeline-arrow {
+    color: transparent;   /* فلش قبلی مخفی */
+    position: relative;
+  }
+
+  .timeline-arrow::before {
+    color: #ff7a18;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
